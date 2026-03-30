@@ -1,0 +1,38 @@
+export const posts = [
+  {
+    id: 1,
+    title: 'How I Design APIs That Scale Across Teams',
+    type: 'Engineering',
+    date: 'Mar 2026',
+    readTime: '6 min read',
+    image: '/Assets/blog/api-design.jpg',
+    mediumUrl: 'https://medium.com/@yourusername/how-i-design-apis',
+  },
+  {
+    id: 2,
+    title: 'The Interface Rhythm Framework for Premium UI',
+    type: 'Design',
+    date: 'Feb 2026',
+    readTime: '8 min read',
+    image: '/Assets/blog/ui-rhythm.jpg',
+    mediumUrl: 'https://medium.com/@yourusername/interface-rhythm-framework',
+  },
+  {
+    id: 3,
+    title: 'From Idea to Shipped Product in 21 Days',
+    type: 'Product',
+    date: 'Jan 2026',
+    readTime: '5 min read',
+    image: '/Assets/blog/product-sprint.jpg',
+    mediumUrl: 'https://medium.com/@yourusername/idea-to-shipped-21-days',
+  },
+  {
+    id: 4,
+    title: 'Why I Switched Every Project to TypeScript',
+    type: 'Engineering',
+    date: 'Dec 2025',
+    readTime: '4 min read',
+    image: '/Assets/blog/typescript.jpg',
+    mediumUrl: 'https://medium.com/@yourusername/switched-to-typescript',
+  },
+]

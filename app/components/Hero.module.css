@@ -1,0 +1,38 @@
+@keyframes letterDrop {
+  0% { opacity: 0; transform: translateY(-48px) skewY(-8deg) scale(1.1); }
+  65% { transform: translateY(5px) skewY(1deg) scale(1); }
+  100% { opacity: 1; transform: translateY(0) skewY(0deg) scale(1); }
+}
+
+@keyframes wmLeft {
+  0% { opacity: 0; transform: translateX(-80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes wmRight {
+  0% { opacity: 0; transform: translateX(80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expand {
+  from { max-width: 0; opacity: 0; }
+  to { max-width: 7rem; opacity: 1; }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.animateLetter { animation: letterDrop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animateWmLeft { animation: wmLeft 1s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both; }
+.animateWmRight { animation: wmRight 1s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+.animateFadeUp { animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animateExpand { animation: expand 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animateFloatSoft { animation: floatSoft 5s ease-in-out infinite; }
+.animateFloatSoftDelay { animation: floatSoft 5s ease-in-out 1.8s infinite; }

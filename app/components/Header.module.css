@@ -1,0 +1,9 @@
+.themeToggle .themeIcon {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.themeToggle:hover .themeIcon,
+.themeToggle:focus-visible .themeIcon {
+  fill: currentColor;
+}

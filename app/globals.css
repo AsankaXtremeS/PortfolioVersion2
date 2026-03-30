@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0d120f;
+  --bg-secondary: #121a15;
+  --surface: rgba(10, 14, 12, 0.92);
+  --surface-border: rgba(34, 197, 94, 0.24);
+  --text-primary: #e7fce8;
+  --text-muted: #86efac;
+  --accent-a: #22c55e;
+  --accent-b: #10b981;
+}
+
+.dark {
+  --bg-primary: #070b09;
+  --bg-secondary: #101812;
+  --surface: rgba(8, 12, 10, 0.94);
+  --surface-border: rgba(74, 222, 128, 0.28);
+  --text-primary: #dcfce7;
+  --text-muted: #86efac;
+  --accent-a: #4ade80;
+  --accent-b: #22c55e;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: "Space Grotesk", "Satoshi", "General Sans", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::selection {
+  background-color: var(--accent-a);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--accent-a);
+  color: white;
+}
+
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-a);
+  outline-offset: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.panel-enter {
+  animation: panel-in 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-surface {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+}
+
+@keyframes float-soft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4.5s ease-in-out infinite;
+}

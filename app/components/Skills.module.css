@@ -1,0 +1,56 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animateCursor { animation: cursor 1s step-end infinite; }
+
+.sectionIn {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.05s;
+}
+
+.catCard {
+  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(74,222,128,0.08);
+}
+
+.skillChip {
+  animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  cursor: default;
+}
+
+.skillChip:hover { transform: translateY(-1px); }
+
+.eduCard {
+  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.2s ease;
+}
+
+.eduCard:hover { transform: translateY(-2px); }
+
+.rightPanel::-webkit-scrollbar { width: 4px; }
+.rightPanel::-webkit-scrollbar-track { background: transparent; }
+.rightPanel::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+}
+.rightPanel::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.rightPanel {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
